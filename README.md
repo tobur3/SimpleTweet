@@ -1,4 +1,4 @@
-# Project 3- *Twitter Client Part 1*
+# Assignment 3- *Twitter Client Part 1*
 
 **SimpleTweet** is an android app that allows a user to view his Twitter timeline. The app utilizes [Twitter REST API](https://dev.twitter.com/rest/public).
 
