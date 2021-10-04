@@ -180,18 +180,18 @@ public class TimelineActivity extends AppCompatActivity {
                     adapter.addAll(tweetFromNetwork);
                     swipeContainer.setRefreshing(false);
                     //query for existing tweet in the DB
-                    AsyncTask.execute(new Runnable() {
-                        @Override
-                        public void run() {
-                            Log.i(TAG, "saving data into database");
+                    //AsyncTask.execute(new Runnable() {
+                      //  @Override
+                        //public void run() {
+                          //  Log.i(TAG, "saving data into database");
 
                             // insert users first
-                            List<User> usersFromNetwork = User.fromJsonTweetArray(tweetFromNetwork);
-                            tweetDao.insertModel(usersFromNetwork.toArray(new User[0]));
+                            //List<User> usersFromNetwork = User.fromJsonTweetArray(tweetFromNetwork);
+                            //tweetDao.insertModel(usersFromNetwork.toArray(new User[0]));
                             //insert tweets next
-                            tweetDao.insertModel(tweetFromNetwork.toArray(new Tweet[0]));
-                        }
-                    });
+                            //tweetDao.insertModel(tweetFromNetwork.toArray(new Tweet[0]));
+                      //  }
+                    //});
 
                 } catch (JSONException e) {
                     Log.e(TAG, "Json exception", e);
